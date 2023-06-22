@@ -5,8 +5,6 @@ import { fileURLToPath } from "url";
 import path from "node:path";
 import os from "node:os";
 
-import { executeCommand } from "./command.js";
-
 export const defaultUserName = "my friend";
 
 export const getUserName = () => {
@@ -57,4 +55,3 @@ export const changeDirectory = (path) => {
 		console.error(err);
 	}
 };
-
