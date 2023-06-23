@@ -72,39 +72,5 @@ export const executeCommand = (command, rl) => {
 		default:
 			break;
 	}
-	// if (command === ".exit") {
-	// 	exitFileManager();
-	// } else if (command.startsWith("cd ")) {
-	// 	changeDirectoryTo(firstArg);
-	// } else if (command.startsWith("ls")) {
-	// 	listFilesAndDirectories();
-	// } else if (command === "up") {
-	// 	navigateUp();
-	// } else if (command.startsWith("cat ")) {
-	// 	readFile(firstArg);
-	// } else if (command.startsWith("add ")) {
-	// 	createEmptyFile(firstArg);
-	// } else if (command.startsWith("rn ")) {
-	// 	renameFile(firstArg, secondArg);
-	// } else if (command.startsWith("cp ")) {
-	// 	isSourceAndTargetPathExist() && copyFile(firstArg, secondArg);
-	// } else if (command.startsWith("mv ")) {
-	// 	isSourceAndTargetPathExist() && moveFile(firstArg, secondArg);
-	// } else if (command.startsWith("rm ")) {
-	// 	deleteFile(firstArg);
-	// } else if (command.startsWith("os ")) {
-	// 	getOperationSystemCommand(firstArg);
-	// } else if (command.startsWith("hash ")) {
-	// 	calculateHash(firstArg);
-	// } else if (command.startsWith("compress ")) {
-	// 	isSourceAndTargetPathExist() && compressFile(firstArg, secondArg);
-	// } else if (command.startsWith("decompress ")) {
-	// 	isSourceAndTargetPathExist() && decompressFile(firstArg, secondArg);
-	// } else {
-	// 	getInvalidInputMsg();
-	// }
-	// if (command !== ".exit") {
-	// 	printWorkingDirectoryAndPrompt(rl);
-	// }
 	printWorkingDirectoryAndPrompt(rl);
 };
