@@ -9,4 +9,5 @@ export const createEmptyFile = (fileName) => {
 	fs.writeFile(fileDirectory, "", (error) => {
 		if (error) getErrorMsg();
 	});
+    
 };

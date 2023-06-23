@@ -24,6 +24,10 @@ export const getCurrentDirectory = () => process.cwd();
 export const getParentDirectory = (currentDirectory) =>
 	path.dirname(currentDirectory);
 export const getAbsolutePath = (directoryPath) => path.resolve(directoryPath);
+export const getFileNameFromSourcePath = (sourcePath) =>
+	path.basename(sourcePath);
+export const getTargetPath = (targetDirectory, fileName) =>
+	path.join(targetDirectory, fileName);
 
 export const sayWelcome = () => {
 	const userName = getUserName();
@@ -54,4 +58,9 @@ export const changeDirectory = (path) => {
 		getInvalidInputMsg();
 		console.error(err);
 	}
+};
+
+export const printWorkingDirectoryAndPrompt = (rl) => {
+	printWorkingDirectory();
+	rl.prompt();
 };
