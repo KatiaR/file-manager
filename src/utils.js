@@ -64,3 +64,4 @@ export const printWorkingDirectoryAndPrompt = (rl) => {
 	printWorkingDirectory();
 	rl.prompt();
 };
+

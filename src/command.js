@@ -11,6 +11,7 @@ import { renameFile } from "./basicOperations/rename.js";
 import { copyFile } from "./basicOperations/copy.js";
 import { moveFile } from "./basicOperations/move.js";
 import { deleteFile } from "./basicOperations/delete.js";
+import { getOperationSystemCommand } from "./operatingSystemInfo/command.js";
 
 export const executeCommand = (command, rl) => {
 	const firstArg = command.split(" ")[1];
@@ -35,6 +36,8 @@ export const executeCommand = (command, rl) => {
 		moveFile(firstArg, secondArg);
 	} else if (command.startsWith("rm ")) {
 		deleteFile(firstArg);
+	} else if (command.startsWith("os ")) {
+		getOperationSystemCommand(firstArg);
 	} else {
 		getInvalidInputMsg();
 	}
