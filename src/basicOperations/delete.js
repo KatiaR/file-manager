@@ -7,7 +7,6 @@ export const deleteFile = (filePath) => {
 	fs.unlink(filePath, (error) => {
 		if (error) {
 			getErrorMsg();
-			console.log(error);
 		}
 	});
 };

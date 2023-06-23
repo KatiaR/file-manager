@@ -65,3 +65,23 @@ export const printWorkingDirectoryAndPrompt = (rl) => {
 	rl.prompt();
 };
 
+export const validateInput = (sourceValue, targetValue, command) => {
+	const commandRequiredSourceAndTargetValues = [
+		"rn ",
+		"cp ",
+		"mv ",
+		"compress ",
+		"decompress ",
+	];
+	const commandWithoutSourceValue = ["ls", "up", ".exit"];
+	const isCommandWithoutSourceValue = commandWithoutSourceValue.find(
+		(commandItem) => !command.startsWith(commandItem)
+	);
+	if (!sourceValue && !isCommandWithoutSourceValue) return true;
+	if (!targetValue) {
+		return !!commandRequiredSourceAndTargetValues.find((commandItem) =>
+			command.startsWith(commandItem)
+		);
+	}
+};
+ 

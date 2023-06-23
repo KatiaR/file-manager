@@ -8,6 +8,7 @@ import {
 } from "../utils.js";
 
 export const copyFile = (sourcePath, targetDirectory) => {
+
 	const fileName = getFileNameFromSourcePath(sourcePath);
 	const targetPath = getTargetPath(targetDirectory, fileName);
 	const sourceStream = fs.createReadStream(sourcePath);
