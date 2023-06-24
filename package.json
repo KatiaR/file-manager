@@ -1,0 +1,19 @@
+{
+	"name": "file-manager",
+	"version": "1.0.0",
+	"description": "Task is to implement File Manager using Node.js APIs",
+	"type": "module",
+	"scripts": {
+		"start": "node src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KatiaR/file-manager.git"
+	},
+	"author": "KatiaR",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/KatiaR/file-manager/issues"
+	},
+	"homepage": "https://github.com/KatiaR/file-manager#readme"
+}

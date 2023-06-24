@@ -1,0 +1,32 @@
+/** @format */
+import { getInvalidInputMsg } from "../utils.js";
+import os from "os";
+
+export const getOperationSystemCommand = (command) => {
+	const commandValue = command.substr(2);
+
+	switch (commandValue) {
+		case "EOL":
+			console.log(JSON.stringify(os.EOL));
+			break;
+		case "cpus":
+			os.cpus().forEach((cpu, index) => {
+				console.log(`CPU ${index + 1}:`);
+				console.log(`  Model: ${cpu.model}`);
+				console.log(`  Speed: ${cpu.speed / 1000} GHz`);
+			});
+			break;
+		case "homedir":
+			console.log(os.homedir());
+			break;
+		case "username":
+			console.log(os.userInfo().username);
+			break;
+		case "architecture":
+			console.log(os.arch());
+			break;
+		default:
+			getInvalidInputMsg();
+			break;
+	}
+};
