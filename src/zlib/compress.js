@@ -19,11 +19,9 @@ export const compressFile = (sourceFilePath, targetDirectory) => {
 
 	readStream.on("error", (err) => {
 		getErrorMsg();
-		console.log(err);
 	});
 
 	writeStream.on("error", (err) => {
 		getErrorMsg();
-		console.log(err);
 	});
 };

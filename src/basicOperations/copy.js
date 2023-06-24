@@ -16,7 +16,7 @@ export const copyFile = (sourcePath, targetDirectory) => {
 
 	sourceStream.pipe(targetStream);
 
-	sourceStream.on("error", () => {
+	sourceStream.on("error", (err) => {
 		getErrorMsg();
 	});
 
